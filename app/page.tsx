@@ -1,69 +1,126 @@
-import Image from "next/image";
+import { Hammer, Shield, Truck, CreditCard } from "lucide-react";
+
+const features = [
+  {
+    icon: Hammer,
+    title: "Quality Tools",
+    description:
+      "Professional-grade tools and equipment sourced from trusted manufacturers worldwide.",
+  },
+  {
+    icon: Shield,
+    title: "Verified Suppliers",
+    description:
+      "Every supplier on our platform is vetted and verified to guarantee authenticity.",
+  },
+  {
+    icon: Truck,
+    title: "County-Wide Delivery",
+    description:
+      "Fast and reliable delivery to every corner of Nakuru County.",
+  },
+  {
+    icon: CreditCard,
+    title: "M-Pesa Payments",
+    description:
+      "Seamless checkout with M-Pesa integration — pay the way you prefer.",
+  },
+] as const;
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="flex min-h-screen flex-col">
+      <header className="border-b border-border">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div className="flex items-center gap-2">
+            <Hammer className="h-6 w-6 text-primary" />
+            <span className="text-xl font-bold tracking-tight">
+              Nakuru Hardware Hub
+            </span>
+          </div>
+          <div className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
+            <a href="#features" className="transition-colors hover:text-foreground">
+              Features
+            </a>
+            <a href="#products" className="transition-colors hover:text-foreground">
+              Products
+            </a>
+            <a href="#contact" className="transition-colors hover:text-foreground">
+              Contact
+            </a>
+          </div>
+          <a
+            href="#products"
+            className="rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+          >
+            Shop Now
+          </a>
+        </nav>
+      </header>
+
+      <main className="flex-1">
+        <section className="mx-auto max-w-7xl px-6 pb-20 pt-24 text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
+            Serving Nakuru County, Kenya
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          <h1 className="mx-auto max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
+            Everything you need to build,
+            <br />
+            <span className="text-primary">delivered to your door.</span>
+          </h1>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            The trusted online marketplace for hardware supplies, power tools,
+            and building materials — connecting Nakuru&apos;s builders with
+            verified suppliers.
+          </p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href="#products"
+              className="rounded-full bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+            >
+              Browse Products
+            </a>
+            <a
+              href="#features"
+              className="rounded-full border border-border px-8 py-3 text-sm font-semibold transition-colors hover:bg-muted"
+            >
+              Learn More
+            </a>
+          </div>
+        </section>
+
+        <section id="features" className="border-t border-border bg-muted/50">
+          <div className="mx-auto max-w-7xl px-6 py-20">
+            <h2 className="text-center text-3xl font-bold tracking-tight">
+              Built for builders
+            </h2>
+            <p className="mx-auto mt-3 max-w-lg text-center text-muted-foreground">
+              Everything you need in one platform — from discovery to delivery.
+            </p>
+            <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {features.map(({ icon: Icon, title, description }) => (
+                <div
+                  key={title}
+                  className="rounded-xl border border-border bg-background p-6 shadow-sm"
+                >
+                  <Icon className="mb-3 h-8 w-8 text-primary" />
+                  <h3 className="font-semibold">{title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
+
+      <footer className="border-t border-border">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Nakuru Hardware Hub</p>
+          <p>Made in Nakuru, Kenya</p>
+        </div>
+      </footer>
     </div>
   );
 }

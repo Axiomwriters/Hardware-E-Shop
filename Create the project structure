@@ -1,0 +1,67 @@
+One important change to your folder structure
+
+Because you're using Next.js, I would slightly adjust the structure you originally wrote.
+
+Instead of thinking:
+
+app/
+components/
+features/
+lib/
+services/
+schemas/
+types/
+
+as completely independent architecture, use them roughly like this:
+
+Hardware-E-Shop/
+│
+├── app/
+│   ├── api/
+│   ├── (customer)/
+│   └── (admin)/
+│
+├── components/
+│   ├── ui/
+│   └── shared/
+│
+├── features/
+│   ├── products/
+│   ├── cart/
+│   ├── checkout/
+│   ├── orders/
+│   └── procurement/
+│
+├── lib/
+│   ├── supabase/
+│   ├── auth/
+│   └── utils/
+│
+├── services/
+│   ├── product.service.ts
+│   ├── cart.service.ts
+│   ├── order.service.ts
+│   ├── payment.service.ts
+│   └── procurement.service.ts
+│
+├── schemas/
+│   ├── product.schema.ts
+│   ├── cart.schema.ts
+│   ├── order.schema.ts
+│   └── payment.schema.ts
+│
+├── types/
+│
+├── supabase/
+│   ├── migrations/
+│   └── seed/
+│
+├── public/
+│
+├── .env.example
+├── .gitignore
+└── README.md
+
+But don't create all the actual files yet.
+
+We're only establishing the architecture.

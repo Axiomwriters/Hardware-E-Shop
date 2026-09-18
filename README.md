@@ -55,6 +55,10 @@ Request Materials
 
 ## Development Workflow
 
+`main` is the protected default branch. All work happens on short-lived
+branches and lands via pull request, gated by CI (lint + typecheck + build)
+and at least one approving review.
+
 ```
 main
 ↓
@@ -62,10 +66,13 @@ feature/*
 ↓
 Pull Request
 ↓
-Code Review
+CI + Code Review
 ↓
-Merge
+Squash Merge
 ```
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full branching model, branch
+naming, and merge policy.
 
 ## Branch Naming
 

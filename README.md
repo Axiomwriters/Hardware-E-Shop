@@ -106,7 +106,7 @@ Hardware-E-Shop/
 ├── lib/                    # Shared utilities & client initializers
 │   ├── supabase/           # Supabase client setup
 │   ├── auth/               # Auth helpers & guards
-│   └── utils/              # Shared helper functions
+│   └── utils.ts            # Shared helper functions
 │
 ├── services/               # Business logic / data abstractions (product, cart, order, payment, procurement)
 ├── schemas/                # Validation & Zod data schemas

@@ -42,10 +42,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# terminal session captures
-Create the project structure
-
 # misc
+/Fixes
 *.pem
 .DS_Store
 Thumbs.db

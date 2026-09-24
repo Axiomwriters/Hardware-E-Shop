@@ -990,10 +990,11 @@ NEXT_PUBLIC_*
 SUPABASE_URL
 SUPABASE_ANON_KEY / public client key
 SUPABASE_SERVICE_ROLE_KEY        # server only
-DARAJA_CONSUMER_KEY              # server only
-DARAJA_CONSUMER_SECRET           # server only
-DARAJA_PASSKEY                   # server only
-DARAJA_CALLBACK_URL              # server-side configuration
+MPESA_CONSUMER_KEY               # server only
+MPESA_CONSUMER_SECRET            # server only
+MPESA_PASSKEY                    # server only
+MPESA_SHORTCODE                  # server-side configuration
+MPESA_CALLBACK_URL               # server-side configuration
 GOOGLE_MAPS_*                     # classify by actual usage/visibility
 ```
 
@@ -1485,7 +1486,7 @@ Recommended structure:
 ```
 docs/
   architecture.md
-  adr/
+  decision-records/
     001-example-decision.md
     002-example-decision.md
 ```
@@ -1612,7 +1613,7 @@ remains unclear:
 ## 36. Immediate Next Steps After Approval
 
 - Commit this document as `docs/architecture.md`.
-- Create/update `docs/adr/` for material architectural decisions.
+- Create/update `docs/decision-records/` for material architectural decisions.
 - Produce the initial ERD and database contract.
 - Review the schema jointly before migrations are implemented.
 - Finalize the inventory reservation/decrement strategy.
@@ -1640,7 +1641,7 @@ docs/
 ├── security.md              # Threat model, auth, authorization, RLS, rate limits
 ├── payments.md              # Daraja/M-Pesa lifecycle and reconciliation
 ├── testing.md               # Testing strategy and critical scenarios
-└── adr/
+└── decision-records/
     ├── 001-....md
     ├── 002-....md
     └── ...
